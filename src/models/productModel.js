@@ -15,11 +15,11 @@ const productSchema = new mongoose.Schema({
   },
   discountedPrice: {
     type: Number,
-    // required:true,
+    required:true,
   },
   discountedPercent: {
     type: Number,
-    // required:true,
+    required:true,
   },
   quantity: {
     type: Number,
@@ -27,11 +27,11 @@ const productSchema = new mongoose.Schema({
   },
   brand: {
     type: String,
-    // required :true
+    required :true
   },
   color: {
     type: String,
-    // required :true
+    required :true
   },
   size: [
     {

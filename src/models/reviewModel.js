@@ -4,12 +4,12 @@ const reviewSchema = new mongoose.Schema(
   {
     product: {
       type: mongoose.Schema.Types.ObjectId,
-      raf: "products",
+      ref: "products",
       required: true,
     },
     user: {
       type: mongoose.Schema.Types.ObjectId,
-      raf: "users",
+      ref: "users",
       required: true,
     },
     review: {

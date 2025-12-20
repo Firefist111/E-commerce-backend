@@ -1,4 +1,5 @@
 const { createToken } = require("../config/jwtProvider");
+const { createCart } = require("../services/cartServices");
 const { createUser, findByUserEmail } = require("../services/userServices");
 const bcrypt = require("bcrypt");
 
@@ -8,7 +9,7 @@ const register = async (req, res) => {
 
     const jwt = createToken(user._id);
 
-    // await CartSevice.createCart(user)
+    await createCart(user)
 
     return res.status(201).json({
       message: "User Created",

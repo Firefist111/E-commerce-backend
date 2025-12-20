@@ -58,6 +58,8 @@ const userProfileByToken = async (token) => {
   try {
     const userId = userIdFromToken(token);
     const user = await User.findById(userId);
+    console.log(typeof(user))
+
     if (!user) {
       throw new Error("User not found");
     }
